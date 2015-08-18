@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-public class lightHandler : MonoBehaviour
+public class licht : MonoBehaviour
 {
 	// Alpha kanaal van de kleur moet gestart worden op het moment dat 1 van de timers (BreathOut)s 0 wordt,
 	// Hierna moet hij hervat worden als de andere (BreathIn) time 0 is.
