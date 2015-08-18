@@ -1,0 +1,34 @@
+1.
+
+NOBODY, I repeat NOBODY works in the master branch
+
+2.
+
+New feature, or action, new Branch
+
+3.
+
+Name your branch according to the action or feature you are adding.
+
+4.
+
+NEVER, I repeat NEVER merge your own Pull Requests.
+
+5. 
+
+Always create a pull request when you reach a usable point in your process.
+
+6.
+
+If members have anything to comment on your code/files, you listen and edit the code/files accordingly. Otherwise explain your decisions to the other members.
+
+7.
+
+Commit at least once every hour. More if necessary. We want to have as much recovery as possible.
+
+8.
+
+Clearly describe changes when commiting anything. Also use #NUMBER to address bugs or certain situations.
+
+
+Add rules if necessary!
