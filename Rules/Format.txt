@@ -51,6 +51,8 @@ unless you intend to change it in the end.
 Use private variables whenever possible, we don't want the inspector to look like the WTC, that didn't end so well, did it?
 
 
+11.
 
+If you are naming scene's use "_" without quotes instead of spaces
 Add Rules if nec
 essary!
