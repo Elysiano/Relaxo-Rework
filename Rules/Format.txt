@@ -1,0 +1,56 @@
+1.
+
+All files should be written in English, that includes titles and descriptions of Pull requests and commits.
+
+2.
+
+A function always starts with a Capital letter
+
+3. 
+
+If you use numbers in names, always write them out( not 10 but "ten")
+
+4.
+
+A variable always starts with a lowercase letter. No exceptions.
+
+5.
+
+Always comment your own code, not everyone knows how everything works when someone else writes it.
+
+6.
+
+Always KNOW what your code does, if you use code from another source (i.e. web) learn the code and comment it, before you use it in the project.
+
+7.
+
+Loosely write the code, or inform your team members when you are adding something interwined. We can't have hours of backtracking everytime someone messes something up.
+
+8.
+
+Code should always work together, not work against eachother.
+
+9.
+
+Always use the following if else format:
+
+if ()
+{
+	print ("Hello World");
+}
+
+so NEVER do this:
+if(){
+print ("hello world);
+}
+
+unless you intend to change it in the end.
+
+10.
+
+Use private variables whenever possible, we don't want the inspector to look like the WTC, that didn't end so well, did it?
+
+
+
+Add Rules if nec
+essary!
