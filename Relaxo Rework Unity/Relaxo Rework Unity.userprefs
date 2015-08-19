@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BackgroundSlideshow.cs">
     <Files>
-      <File FileName="Assets\Scripts\UIManager.cs" Line="43" Column="4" />
+      <File FileName="Assets\BackgroundSlideshow.cs" Line="50" Column="3" />
+      <File FileName="..\..\..\..\Nolybab\Nolybab\Nolybab\Assets\Scripts\WallSounds.cs" Line="40" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
