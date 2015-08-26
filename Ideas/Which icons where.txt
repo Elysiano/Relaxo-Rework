@@ -1,0 +1,79 @@
+Icons needed per screen:
+
+1.
+
+"Start" icon
+"Options" icon
+"profile" icon
+"progress" icon
+
+2.
+
+"Back" icon
+Slider icons
+"Checkmark" icons
+
+3.
+
+"Set" icon
+"All sessions" icon
+"Timer" icon
+"Back" icon
+
+4.
+
+"selection" icon
+Icons to indicate time, intensity and how much currency you can get.
+"Back" icon
+"currency" icon
+
+5.
+
+"selection" icon
+Icons to indicate time, intensity and how much currency you can get.
+"Back" icon
+"currency" icon
+
+6.
+
+"Back" Icon
+"forward" icon
+"skip" icon
+
+7.
+
+"Stop session" icon?
+
+8.
+
+"xp" icon
+"level/bar" icon
+"back(to menu)" icon
+"new session" icon
+
+9.
+
+"profile" icon
+"achievement" icon
+"xp" icon
+"currency" icon
+"sessions" icon
+"stats" icon
+"back" icon
+
+10.
+
+Unique "achievement" icons per achievement
+Icons to indicate how much currency you got from 'chieves
+"back" icon
+
+11.
+
+"stat" icons unique
+"back" icon
+
+
+
+
+
+Add if neccesary!
