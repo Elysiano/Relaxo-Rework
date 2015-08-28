@@ -6,8 +6,15 @@ public class TimeInput : MonoBehaviour
 {
 	GameObject hours;
 	GameObject minutes;
+	GameObject touchHour;
+	GameObject touchMinute;
 	int inputHours;
 	int inputMinutes;
+
+	public TouchGesture.GestureSettings GestureSetting;
+	private TouchGesture touch;
+
+	TouchGesture touchGesture;
 
 	//Set GameObjects to variables & set the start time to 0 hours and 0 minutes
 	void Start ()
@@ -15,15 +22,52 @@ public class TimeInput : MonoBehaviour
 		hours = GameObject.Find ("Hours");
 		minutes = GameObject.Find ("Minutes");
 
+		touchHour = GameObject.Find ("TouchHour");
+		touchMinute = GameObject.Find ("TouchMinute");
+
 		inputHours = 0;
 		inputMinutes = 0;
-	}
 
+		touch = new TouchGesture(this.GestureSetting);
+		StartCoroutine(touch.CheckHorizontalSwipes(
+		onDownSwipe: () =>
+		{
+			//if (touchGesture.startPos == touchHour.transform.position)
+			//{
+				print ("Down");
+				//inputHours --;
+			//}
+		},
+
+		onUpSwipe: () =>
+		{
+			print ("Up");
+			//inputHours ++;
+		},
+
+		onRightSwipe: () =>
+		{
+			//if (touchGesture.startPos == touchHour.transform.position)
+			//{
+			print ("Right");
+			//inputHours --;
+			//}
+		},
+		
+		onLeftSwipe: () =>
+		{
+			print ("Left");
+			//inputHours ++;
+		}
+		));
+	}
+	
 	// Keep updating the playtime
 	void Update ()
 	{
 		hours.GetComponent<Text> ().text = inputHours.ToString ();
 		minutes.GetComponent<Text> ().text = inputMinutes.ToString ();
+		//print (Input.mousePosition);
 	}
 
 	// Functions to + or - the playtime if an arrow is pressed
