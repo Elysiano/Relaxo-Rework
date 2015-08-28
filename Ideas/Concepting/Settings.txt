@@ -16,10 +16,14 @@ PRE-GAME
 	- Maybe we can replace the scrollable amount of minutes with the soundtracks, this so that the session ends simultaneously with the soundtrack.
 	- Ask the user how many minutes he had to sugest a session. 
 	- By looking at the app Calm, we can make a custom time selection.
-	-For the tutorial we can explain everything on the Google way, popups from the button itself, and for swipe animations let the screen swipe itself and put the explenation in the new swiped area. 
-
+	
 	-THE IDEA NOW: there is a preset of sessions that depends on the time the user has. They can change the colorscheme and maybe the music( this depends on the available soundtracks for that amount of minutes). 
 
 
 GAME
 	- The soundtrack has to fade out at the end.
+	- we have to test with a phone with only onscreen buttons if they dissapear in the game. Maybe add a line of code that the buttons stay light-up so the player knows that he have to use them in the game menu.
+
+TUTORIAL
+	- For the tutorial we can explain everything on the Google way, popups from the button itself, and for swipe animations let the screen swipe itself and put the explenation in the new swiped area. 
+	- We have to test if the player automatically uses the back button on their phone or if they miss a button on the screen.
