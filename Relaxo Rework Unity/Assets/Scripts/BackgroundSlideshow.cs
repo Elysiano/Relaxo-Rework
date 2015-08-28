@@ -27,6 +27,7 @@ public class BackgroundSlideshow : MonoBehaviour {
 
 	void Start () 
 	{
+		//Setting initial values
 		maxTextures = myTextures.Length;
 		originalColor = GetComponent<RawImage> ().color;
 		GetComponent<RawImage> ().color = new Color (originalColor.r, originalColor.g, originalColor.b, 0f);
@@ -34,15 +35,16 @@ public class BackgroundSlideshow : MonoBehaviour {
 
 	void Update () 
 	{
+		//Move the background in a specific direction
 		transform.Translate (movementDirection * movementSpeed * Time.deltaTime);
 
-		//the timer of the slideshow
+		//The timer of the slideshow
 		slideShowTimer += Time.deltaTime;
 
 		//Picture gets an amount of opacity based on the in and out effects
 		GetComponent<RawImage> ().color = new Color (originalColor.r, originalColor.g, originalColor.b, colorFade);
 
-		//fade in effect
+		//Fade in effect
 		if(slideShowTimer >= 0.0f && slideShowTimer <= colorFadeTime)
 		{
 			colorFadeTimer += Time.deltaTime;
@@ -58,7 +60,7 @@ public class BackgroundSlideshow : MonoBehaviour {
 			}
 		}
 
-		//fade out effect
+		//Fade out effect
 		if(slideShowTimer >= slideShowDuration - colorFadeTime)
 		{
 			colorFadeTimer -= Time.deltaTime;
@@ -74,12 +76,12 @@ public class BackgroundSlideshow : MonoBehaviour {
 			}
 		}
 
-		//change images
+		//Change images
 		if (slideShowTimer >= slideShowDuration) 
 		{
 			if (arrayPos == maxTextures) 
 			{
-				//reset array index so the slideshow restarts with the first picture
+				//Reset array index so the slideshow restarts with the first picture
 				arrayPos = 0;
 			}
 			else
@@ -87,30 +89,30 @@ public class BackgroundSlideshow : MonoBehaviour {
 				arrayPos++;
 				GetComponent<RawImage>().texture = myTextures [arrayPos];
 
-				//get a new movement direction
+				//Get a new movement direction
 				float randomNumberMovement = Random.Range (-1f, 1f);
 
 				if (randomNumberMovement < 0f)
 				{
-					//move left
+					//Move left
 					movementDirection = new Vector2 (-1f,0f);
 				}
 				else
 				{
-					//move right
+					//Move right
 					movementDirection = new Vector2 (1f,0f);
 				}
 
-				//get a new movement speed
+				//Get a new movement speed
 				float randomNumberSpeed = Random.Range (0.1f, 1.5f);
 				movementSpeed = randomNumberSpeed;
 			}
 
-			//reset slideShowTimer to zero
+			//Reset slideShowTimer to zero
 			slideShowTimer = 0.0f;
 		}
 
 
-		//move pictures at a random direction (maybe add random speed?) 
+		//Move pictures at a random direction (maybe add random speed?) 
 	}
 }
