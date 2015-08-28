@@ -4,13 +4,11 @@ using System.Collections;
 public class UIManager : MonoBehaviour {
 
 	public bool toggleDisplayed = false;
+	public bool toggleBarDisplayed = false;
 
 	public void Update()
 	{
-		if (toggleDisplayed) 
-		{
-			//turn arrow
-		}
+		print (toggleBarDisplayed);
 	}
 
 	public void DisableBoolInAnimator(Animator anim)
@@ -43,4 +41,16 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 
+	public void ToggleProgressBarBoolInAnimator(Animator anim)
+	{
+		if (toggleBarDisplayed == false) {
+			anim.SetBool ("isDisplayed", true);
+			toggleBarDisplayed = true;
+		} 
+		else 
+		{
+			anim.SetBool ("isDisplayed", false);
+			toggleBarDisplayed = false;
+		}
+	}
 }
