@@ -5,7 +5,7 @@ using System.Collections;
 public class BackgroundSlideshow : MonoBehaviour {
 
 	//Pictures
-	public Texture[] myTextures = new Texture[5];
+	public Texture[] myTextures;
 	int maxTextures;
 	int arrayPos = 0;
 
@@ -35,6 +35,14 @@ public class BackgroundSlideshow : MonoBehaviour {
 
 	void Update () 
 	{
+
+		if (arrayPos == maxTextures -1) 
+		{
+			//Reset array index so the slideshow restarts with the first picture
+			arrayPos = -1;
+		}
+
+		print (arrayPos);
 		//Move the background in a specific direction
 		transform.Translate (movementDirection * movementSpeed * Time.deltaTime);
 
@@ -79,10 +87,11 @@ public class BackgroundSlideshow : MonoBehaviour {
 		//Change images
 		if (slideShowTimer >= slideShowDuration) 
 		{
-			if (arrayPos == maxTextures) 
+		
+			if (arrayPos == maxTextures -1) 
 			{
-				//Reset array index so the slideshow restarts with the first picture
-				arrayPos = 0;
+				//Reset array index so the slideshow restarts with the first picture FAIL SAFE
+				arrayPos = -1;
 			}
 			else
 			{
@@ -104,7 +113,7 @@ public class BackgroundSlideshow : MonoBehaviour {
 				}
 
 				//Get a new movement speed
-				float randomNumberSpeed = Random.Range (0.1f, 1.5f);
+				float randomNumberSpeed = Random.Range (0.3f, 1.5f);
 				movementSpeed = randomNumberSpeed;
 			}
 
