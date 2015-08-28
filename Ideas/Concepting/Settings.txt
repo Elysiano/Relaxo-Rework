@@ -1,0 +1,24 @@
+
+
+COLORS
+	- You can select color scheme to use in the level, it can maybe be unlocked with increasing level and be purchased with coins.
+	- Final unlockable can be a colour chooser where you can combine all the unlocked colours( not all colours because some may not work or interfere with the goal of the game). This because everyone loves different colours.
+ 
+MUSIC
+	- Music can be unlocked by increasing level or coins. A problem can be that the newest sound is not as relaxing as the previous, wat can be seen as a 'downgrade'.
+	- For music we can look for collaborators and invest in music to put in the game.
+
+PRE-GAME
+	- The old screen contained a screen where you can chose the amount of minutes you want to play.
+	- An idea for the new screen is the same principle but instead of a numeric (standard) screen that interfere with the look and feel of the game we can implement a scrollable amount of minutes you can play.
+	- The screen may also contain the information which colorscheme you are using, what music there will be played.
+	- The scrollable amount of minutes be be ajusted per soundtrack so the player can not select a higher amount of minutes than the lengthe of the soundtrack.
+	- Maybe we can replace the scrollable amount of minutes with the soundtracks, this so that the session ends simultaneously with the soundtrack.
+	- Ask the user how many minutes he had to sugest a session. 
+	- By looking at the app Calm, we can make a custom time selection.
+
+	-THE IDEA NOW: there is a preset of sessions that depends on the time the user has. They can change the colorscheme and maybe the music( this depends on the available soundtracks for that amount of minutes). 
+
+
+GAME
+	- The soundtrack has to fade out at the end.
