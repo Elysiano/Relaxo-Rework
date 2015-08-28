@@ -53,6 +53,9 @@ Use private variables whenever possible, we don't want the inspector to look lik
 
 11.
 
-If you are naming scene's use "_" without quotes instead of spaces
+If you are naming scene's use "_" without quotes instead of spaces.
+
+12.
+For visable text in the game use sani trixi sans, 69p.
 Add Rules if nec
 essary!
