@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\blinkLight2.cs" />
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\cubesDraaien.cs" />
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\nextPlane.cs" />
+     <Compile Include="Assets\Scripts\TimeInput.cs" />
      <Compile Include="Assets\Scripts\UIInputField.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\changeScene.cs" />
