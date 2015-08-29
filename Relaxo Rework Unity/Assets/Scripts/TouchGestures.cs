@@ -47,12 +47,29 @@ public class TouchGesture
 						else
 							onDownSwipe(); //Left-swipe
 
+//						if (Mathf.Sign(touch.position.x - startPos.x) == 1f) //Swipe-direction, either 1 or -1.   
+//							onRightSwipe(); //Right-swipe
+//						
+//						else
+//							onLeftSwipe(); //Left-swipe
+					}
+
+					if (isASwipe2(touch))
+					{
+						couldBeSwipe = false; //<-- Otherwise this part would be called over and over again.
+//						if (Mathf.Sign(touch.position.y - startPos.y) == 1f) //Swipe-direction, either 1 or -1.   
+//							onUpSwipe(); //Right-swipe
+//						
+//						else
+//							onDownSwipe(); //Left-swipe
+						
 						if (Mathf.Sign(touch.position.x - startPos.x) == 1f) //Swipe-direction, either 1 or -1.   
 							onRightSwipe(); //Right-swipe
 						
 						else
 							onLeftSwipe(); //Left-swipe
 					}
+
 					break;
 				}
 				lastPhase = touch.phase;
@@ -72,8 +89,17 @@ public class TouchGesture
 	{
 		float swipeTime = Time.time - swipeStartTime; //Time the touch stayed at the screen till now.
 		float swipeDist = Mathf.Abs(touch.position.y - startPos.y); //Swipe distance
-		float swipeDist2 = Mathf.Abs(touch.position.x - startPos.x); //Swipe distance
+		//float swipeDist2 = Mathf.Abs(touch.position.x - startPos.x); //Swipe distance
 		return couldBeSwipe && swipeTime < settings.maxSwipeTime && swipeDist > settings.minSwipeDist;
+		//return couldBeSwipe && swipeTime < settings.maxSwipeTime && swipeDist2 > settings.minSwipeDist;
+	}
+
+	private bool isASwipe2(Touch touch)
+	{
+		float swipeTime = Time.time - swipeStartTime; //Time the touch stayed at the screen till now.
+		//float swipeDist = Mathf.Abs(touch.position.y - startPos.y); //Swipe distance
+		float swipeDist2 = Mathf.Abs(touch.position.x - startPos.x); //Swipe distance
+		//return couldBeSwipe && swipeTime < settings.maxSwipeTime && swipeDist > settings.minSwipeDist;
 		return couldBeSwipe && swipeTime < settings.maxSwipeTime && swipeDist2 > settings.minSwipeDist;
 	}
 }
