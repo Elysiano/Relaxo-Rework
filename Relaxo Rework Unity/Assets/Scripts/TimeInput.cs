@@ -11,14 +11,22 @@ public class TimeInput : MonoBehaviour
 	int inputHours;
 	int inputMinutes;
 
+	Toggle timeScreenToggle;
+	Toggle sessionScreenToggleRight;
+	Toggle sessionScreenToggleLeft;
+	Toggle instructionsScreenToggle;
+
 	public TouchGesture.GestureSettings GestureSetting;
 	private TouchGesture touch;
 
 	TouchGesture touchGesture;
+	UIManager uiManager;
 
 	//Set GameObjects to variables & set the start time to 0 hours and 0 minutes
 	void Start ()
 	{
+		uiManager = GameObject.Find ("UIManager").GetComponent<UIManager> ();
+
 		hours = GameObject.Find ("Hours");
 		minutes = GameObject.Find ("Minutes");
 
@@ -32,32 +40,36 @@ public class TimeInput : MonoBehaviour
 		StartCoroutine(touch.CheckHorizontalSwipes(
 		onDownSwipe: () =>
 		{
-			//if (touchGesture.startPos == touchHour.transform.position)
-			//{
-				print ("Down");
-				//inputHours --;
-			//}
+			print ("Down");
 		},
 
 		onUpSwipe: () =>
 		{
 			print ("Up");
-			//inputHours ++;
 		},
 
 		onRightSwipe: () =>
 		{
-			//if (touchGesture.startPos == touchHour.transform.position)
-			//{
 			print ("Right");
-			//inputHours --;
-			//}
+			sessionScreenToggleRight = GameObject.Find ("Session Screen Toggle R").GetComponent<Toggle>();
+			sessionScreenToggleRight.isOn = true;
+			sessionScreenToggleRight.isOn = false;
+
+			//instructionsScreenToggle = GameObject.Find ("Instructions Screen Toggle").GetComponent<Toggle>();
+			//instructionsScreenToggle.isOn = true;
+			//instructionsScreenToggle.isOn = false;
 		},
 		
 		onLeftSwipe: () =>
 		{
 			print ("Left");
-			//inputHours ++;
+			timeScreenToggle = GameObject.Find ("Time Screen Toggle").GetComponent<Toggle>();
+			timeScreenToggle.isOn = true;
+			timeScreenToggle.isOn = false;
+
+			//sessionScreenToggleLeft = GameObject.Find ("Session Screen Toggle L").GetComponent<Toggle>();
+			//sessionScreenToggleLeft.isOn = true;
+			//sessionScreenToggleLeft.isOn = false;
 		}
 		));
 	}
@@ -118,11 +130,5 @@ public class TimeInput : MonoBehaviour
 		{
 			inputMinutes = 59;
 		}
-	}
-
-	// Go to the next slide
-	public void NextSlide ()
-	{
-
 	}
 }
