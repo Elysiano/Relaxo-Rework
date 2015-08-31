@@ -1,0 +1,12 @@
+Features
+	- Wekker toevoegen zodat de speler niet in slaap kan vallen.
+	- Wekker toevoegen zodat de speler voor de slaapmodus niet via een andere app een wekker moet zetten.
+	- Voor de wekker modus ringtones toevoegen aan de app.
+
+Andere gamemodes
+	- SLAAPMODUS. Deze modus werkt via de speakers zodat de telefoon niet op de speler hoeft te liggen.
+	  De werking van de app is hetzelfde alleen de app speelt muziek en de coach af via de speakers.
+	  De muziek zal samen met de coach steeds zachter worden. De coach zal de eerste paar minuten(?) 
+	  aanwezig zijn om het tempo aan te geven en zal steeds zachter worden waarnaar de muziek alleen nogmaar hoorbaar is.
+	  Als de sessie(aantal minuten) afgelopen is zal de telefoon op slaapstand gaan(mogelijk qua code?),
+	  doordat de speler van tevoren de telefoon al op vliegtuigstand heeft gezet zal de telefoon ook niet meer oplichten/aangaan. 
