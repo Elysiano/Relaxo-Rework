@@ -24,9 +24,10 @@ public class BackgroundSlideshow : MonoBehaviour {
 	//Picture movement
 	public float movementSpeed = 1f;
 	public Vector2 movementDirection = new Vector2 (1f,0f);
-
 	void Start () 
 	{
+
+
 		maxTextures = myTextures.Length;
 		originalColor = GetComponent<RawImage> ().color;
 		GetComponent<RawImage> ().color = new Color (originalColor.r, originalColor.g, originalColor.b, 0f);
@@ -34,6 +35,7 @@ public class BackgroundSlideshow : MonoBehaviour {
 
 	void Update () 
 	{
+
 		transform.Translate (movementDirection * movementSpeed * Time.deltaTime);
 
 		//the timer of the slideshow
@@ -102,15 +104,18 @@ public class BackgroundSlideshow : MonoBehaviour {
 				}
 
 				//get a new movement speed
-				float randomNumberSpeed = Random.Range (0.1f, 1.5f);
+				float randomNumberSpeed = Random.Range (0.35f, 1.5f);
 				movementSpeed = randomNumberSpeed;
 			}
 
 			//reset slideShowTimer to zero
 			slideShowTimer = 0.0f;
+
+
+			// Reset to the original position of the background
+			GetComponent<RectTransform> ().anchoredPosition = new Vector2(0f,0f);
+
+
 		}
-
-
-		//move pictures at a random direction (maybe add random speed?) 
 	}
 }
