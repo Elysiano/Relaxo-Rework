@@ -1,12 +1,14 @@
 Features
-	- Wekker toevoegen zodat de speler niet in slaap kan vallen.
-	- Wekker toevoegen zodat de speler voor de slaapmodus niet via een andere app een wekker moet zetten.
-	- Voor de wekker modus ringtones toevoegen aan de app.
+	- Add an alarm to prevent the player falling asleep.
+	- Add a setting to help the player to set an alarm without leaving the app(using a different app).
+	- Add ringtones for the alarm feature.
+	- Test how much batterydrain an session will give(%/mAh)
 
-Andere gamemodes
-	- SLAAPMODUS. Deze modus werkt via de speakers zodat de telefoon niet op de speler hoeft te liggen.
-	  De werking van de app is hetzelfde alleen de app speelt muziek en de coach af via de speakers.
-	  De muziek zal samen met de coach steeds zachter worden. De coach zal de eerste paar minuten(?) 
-	  aanwezig zijn om het tempo aan te geven en zal steeds zachter worden waarnaar de muziek alleen nogmaar hoorbaar is.
-	  Als de sessie(aantal minuten) afgelopen is zal de telefoon op slaapstand gaan(mogelijk qua code?),
-	  doordat de speler van tevoren de telefoon al op vliegtuigstand heeft gezet zal de telefoon ook niet meer oplichten/aangaan. 
+Other gamemodes
+	- Sleepmode
+		This mode works with the speakers instead of headphones. It will not regester the in/exhale because the person will fall asleep and the phone may brake this way. 
+		The coach will be present for the first couple of minutes( depends on the data gathered for how long the person can breath without failing).
+		The music will be present the whole session and will drop in vollume to let the person rest and fall asleep.
+		Before the session the phone will already be in airplane mode because this is recommend.
+		At the end of the session Relaxo will put the phone in standby mode to save battery.
+

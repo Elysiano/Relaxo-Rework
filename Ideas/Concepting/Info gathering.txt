@@ -1,0 +1,49 @@
+
+
+ 	 - The info that has to be gathered for the post session stats are:
+
+
+
+		- Time of session
+		- Amount of 'good' inhales/exhales
+		- Percentage of good in/ex
+		- Amount of coins gathered
+		- Amount of xp gathered
+		- 
+
+
+	- The info to be showed in the profile screen
+	
+
+		- Name
+		- Age
+		- Sex
+		- Level
+		- xp
+		- Coins
+		- Ec
+		- Stats
+			- Time played
+			- Sessions played
+			- Amount of good in/exhales
+			- Percentage good in/exhales
+
+	
+
+
+
+	- Achievements
+
+		- Play... hour
+		- Do ... sessions
+		- Reach level...
+		- Get a 100% rate in one session
+		- Unlock new music
+		- Unlock new color scheme
+		- Connect with...fb
+		- Look at a friends profile
+		- Share the app
+		- Share your progress
+		-
+		-
+		-
