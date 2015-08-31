@@ -1,0 +1,4 @@
+31-08
+	think about xp/level system
+	think about coins system
+	think about monitization system
