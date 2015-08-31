@@ -33,28 +33,28 @@ public class ActiveScreen : MonoBehaviour
 			else
 				homeScreen = false;
 
-			if (hit.collider.tag == "SettingsScreen")
+			if (hit.transform.tag == "SettingsScreen")
 			{
 				settingsScreen = true;
 			}
 			else
 				settingsScreen = false;
 
-			if (hit.collider.tag == "ProfileScreen")
+			if (hit.transform.tag == "ProfileScreen")
 			{
 				profileScreen = true;
 			}
 			else
 				profileScreen = false;
 
-			if (hit.collider.tag == "AchievementsScreen")
+			if (hit.transform.tag == "AchievementsScreen")
 			{
 				achievementsScreen = true;
 			}
 			else
 				achievementsScreen = false;
 
-			if (hit.collider.tag == "StatisticsScreen")
+			if (hit.transform.tag == "StatisticsScreen")
 			{
 				staticticsScreen = true;
 			}
@@ -68,14 +68,14 @@ public class ActiveScreen : MonoBehaviour
 			else
 				timeScreen = false;
 
-			if (hit.collider.tag == "SessionScreen")
+			if (hit.transform.tag == "SessionScreen")
 			{
 				sessionScreen = true;
 			}
 			else
 				sessionScreen = false;
 
-			if (hit.collider.tag == "InstructionsScreen")
+			if (hit.transform.tag == "InstructionsScreen")
 			{
 				instructionsScreen = true;
 			}

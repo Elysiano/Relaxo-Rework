@@ -9,13 +9,17 @@ public class SwipeScript : MonoBehaviour
 
 	Toggle homeScreenToggleRight;
 	Toggle homeScreenToggleLeft;
-	Toggle timeScreenToggle;
+	Toggle homeScreenToggleDown;
+	Toggle timeScreenToggleLeft;
+	Toggle timeScreenToggleUp;
 	Toggle sessionScreenToggleRight;
 	Toggle sessionScreenToggleLeft;
 	Toggle instructionsScreenToggle;
 	Toggle settingsScreenToggle;
-	Toggle profileScreenToggle;
-	Toggle achievementsScreenToggle;
+	Toggle profileScreenToggleLeft;
+	Toggle profileScreenToggleRight;
+	Toggle achievementsScreenToggleLeft;
+	Toggle achievementsScreenToggleRight;
 	Toggle statisticsScreenToggle;
 	
 	TouchGesture touchGesture;
@@ -29,12 +33,22 @@ public class SwipeScript : MonoBehaviour
 		StartCoroutine(touch.CheckHorizontalSwipes(
 		onDownSwipe: () =>
 		{
-			print ("Down");
+			if (activeScreen.timeScreen)
+			{
+				timeScreenToggleUp = GameObject.Find ("Time Screen Toggle U").GetComponent<Toggle>();
+				timeScreenToggleUp.isOn = true;
+				timeScreenToggleUp.isOn = false;
+			}
 		},
 		
 		onUpSwipe: () =>
 		{
-			print ("Up");
+			if (activeScreen.homeScreen)
+			{
+				homeScreenToggleDown = GameObject.Find ("Home Screen Toggle D").GetComponent<Toggle>();
+				homeScreenToggleDown.isOn = true;
+				homeScreenToggleDown.isOn = false;
+			}
 		},
 		
 		onRightSwipe: () =>
@@ -45,11 +59,26 @@ public class SwipeScript : MonoBehaviour
 				homeScreenToggleRight.isOn = true;
 				homeScreenToggleRight.isOn = false;
 			}
-			if (activeScreen.settingsScreen)
+
+			if (activeScreen.profileScreen)
 			{
-				settingsScreenToggle = GameObject.Find ("Settings Screen Toggle").GetComponent<Toggle>();
-				sessionScreenToggleRight.isOn = true;
-				sessionScreenToggleRight.isOn = false;
+				profileScreenToggleRight = GameObject.Find ("Profile Screen Toggle R").GetComponent<Toggle>();
+				profileScreenToggleRight.isOn = true;
+				profileScreenToggleRight.isOn = false;
+			}
+
+			if (activeScreen.achievementsScreen)
+			{
+				achievementsScreenToggleRight = GameObject.Find ("Achievements Screen Toggle R").GetComponent<Toggle>();
+				achievementsScreenToggleRight.isOn = true;
+				achievementsScreenToggleRight.isOn = false;
+			}
+
+			if (activeScreen.staticticsScreen)
+			{
+				statisticsScreenToggle = GameObject.Find ("Statistics Screen Toggle").GetComponent<Toggle>();
+				statisticsScreenToggle.isOn = true;
+				statisticsScreenToggle.isOn = false;
 			}
 
 			if (activeScreen.sessionScreen)
@@ -69,32 +98,39 @@ public class SwipeScript : MonoBehaviour
 		
 		onLeftSwipe: () =>
 		{
+			if (activeScreen.homeScreen)
+			{
+				homeScreenToggleLeft = GameObject.Find ("Home Screen Toggle L").GetComponent<Toggle>();
+				homeScreenToggleLeft.isOn = true;
+				homeScreenToggleLeft.isOn = false;
+			}
+
+			if (activeScreen.settingsScreen)
+			{
+				settingsScreenToggle = GameObject.Find ("Settings Screen Toggle").GetComponent<Toggle>();
+				settingsScreenToggle.isOn = true;
+				settingsScreenToggle.isOn = false;
+			}
+
 			if (activeScreen.profileScreen)
 			{
-				profileScreenToggle = GameObject.Find ("Profile Screen Toggle").GetComponent<Toggle>();
-				profileScreenToggle.isOn = true;
-				profileScreenToggle.isOn = false;
+				profileScreenToggleLeft = GameObject.Find ("Profile Screen Toggle L").GetComponent<Toggle>();
+				profileScreenToggleLeft.isOn = true;
+				profileScreenToggleLeft.isOn = false;
 			}
 			
 			if (activeScreen.achievementsScreen)
 			{
-				achievementsScreenToggle = GameObject.Find ("Achievements Screen Toggle").GetComponent<Toggle>();
-				achievementsScreenToggle.isOn = true;
-				achievementsScreenToggle.isOn = false;
-			}
-			
-			if (activeScreen.staticticsScreen)
-			{
-				statisticsScreenToggle = GameObject.Find ("Statistics Screen Toggle").GetComponent<Toggle>();
-				statisticsScreenToggle.isOn = true;
-				statisticsScreenToggle.isOn = false;
+				achievementsScreenToggleLeft = GameObject.Find ("Achievements Screen Toggle L").GetComponent<Toggle>();
+				achievementsScreenToggleLeft.isOn = true;
+				achievementsScreenToggleLeft.isOn = false;
 			}
 
 			if (activeScreen.timeScreen)
 			{
-				timeScreenToggle = GameObject.Find ("Time Screen Toggle").GetComponent<Toggle>();
-				timeScreenToggle.isOn = true;
-				timeScreenToggle.isOn = false;
+				timeScreenToggleLeft = GameObject.Find ("Time Screen Toggle L").GetComponent<Toggle>();
+				timeScreenToggleLeft.isOn = true;
+				timeScreenToggleLeft.isOn = false;
 			}
 			
 			if (activeScreen.sessionScreen)
