@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ActiveScreen.cs" />
      <Compile Include="Assets\Scripts\BackgroundSlideshow.cs" />
      <Compile Include="Assets\Scripts\GyroscopeMovement.cs" />
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\LolWat.cs" />
@@ -53,6 +54,7 @@
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\blinkLight2.cs" />
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\cubesDraaien.cs" />
      <Compile Include="Assets\Scripts\Scripts who can be deleted if not used\nextPlane.cs" />
+     <Compile Include="Assets\Scripts\SwipeScript.cs" />
      <Compile Include="Assets\Scripts\TimeInput.cs" />
      <Compile Include="Assets\Scripts\TouchGestures.cs" />
      <Compile Include="Assets\Scripts\UIInputField.cs" />

@@ -21,11 +21,13 @@ public class TimeInput : MonoBehaviour
 
 	TouchGesture touchGesture;
 	UIManager uiManager;
+	ActiveScreen activeScreen;
 
 	//Set GameObjects to variables & set the start time to 0 hours and 0 minutes
 	void Start ()
 	{
 		uiManager = GameObject.Find ("UIManager").GetComponent<UIManager> ();
+		activeScreen = GameObject.Find ("Main Camera").GetComponent<ActiveScreen> ();
 
 		hours = GameObject.Find ("Hours");
 		minutes = GameObject.Find ("Minutes");
@@ -36,42 +38,54 @@ public class TimeInput : MonoBehaviour
 		inputHours = 0;
 		inputMinutes = 0;
 
-		touch = new TouchGesture(this.GestureSetting);
-		StartCoroutine(touch.CheckHorizontalSwipes(
-		onDownSwipe: () =>
-		{
-			print ("Down");
-		},
-
-		onUpSwipe: () =>
-		{
-			print ("Up");
-		},
-
-		onRightSwipe: () =>
-		{
-			print ("Right");
-			sessionScreenToggleRight = GameObject.Find ("Session Screen Toggle R").GetComponent<Toggle>();
-			sessionScreenToggleRight.isOn = true;
-			sessionScreenToggleRight.isOn = false;
-
-			//instructionsScreenToggle = GameObject.Find ("Instructions Screen Toggle").GetComponent<Toggle>();
-			//instructionsScreenToggle.isOn = true;
-			//instructionsScreenToggle.isOn = false;
-		},
-		
-		onLeftSwipe: () =>
-		{
-			print ("Left");
-			timeScreenToggle = GameObject.Find ("Time Screen Toggle").GetComponent<Toggle>();
-			timeScreenToggle.isOn = true;
-			timeScreenToggle.isOn = false;
-
-			//sessionScreenToggleLeft = GameObject.Find ("Session Screen Toggle L").GetComponent<Toggle>();
-			//sessionScreenToggleLeft.isOn = true;
-			//sessionScreenToggleLeft.isOn = false;
-		}
-		));
+//		touch = new TouchGesture(this.GestureSetting);
+//		StartCoroutine(touch.CheckHorizontalSwipes(
+//		onDownSwipe: () =>
+//		{
+//			print ("Down");
+//		},
+//
+//		onUpSwipe: () =>
+//		{
+//			print ("Up");
+//		},
+//
+//		onRightSwipe: () =>
+//		{
+//			print ("Right");
+//			if (activeScreen.sessionScreen)
+//			{
+//				sessionScreenToggleRight = GameObject.Find ("Session Screen Toggle R").GetComponent<Toggle>();
+//				sessionScreenToggleRight.isOn = true;
+//				sessionScreenToggleRight.isOn = false;
+//			}
+//
+//			if (activeScreen.instructionsScreen)
+//			{
+//				instructionsScreenToggle = GameObject.Find ("Instructions Screen Toggle").GetComponent<Toggle>();
+//				instructionsScreenToggle.isOn = true;
+//				instructionsScreenToggle.isOn = false;
+//			}
+//		},
+//		
+//		onLeftSwipe: () =>
+//		{
+//			print ("Left");
+//			if (activeScreen.timeScreen)
+//			{
+//				timeScreenToggle = GameObject.Find ("Time Screen Toggle").GetComponent<Toggle>();
+//				timeScreenToggle.isOn = true;
+//				timeScreenToggle.isOn = false;
+//			}
+//
+//			if (activeScreen.sessionScreen)
+//			{
+//				sessionScreenToggleLeft = GameObject.Find ("Session Screen Toggle L").GetComponent<Toggle>();
+//				sessionScreenToggleLeft.isOn = true;
+//				sessionScreenToggleLeft.isOn = false;
+//			}
+//		}
+//		));
 	}
 	
 	// Keep updating the playtime
