@@ -1,0 +1,18 @@
+
+
+ level XP
+	- See Level systeem sheet
+	- Increase 100+(100 per 2 levels)
+	
+
+
+	1 session:
+		- 100 xp(shown)
+		- 50 coins(shown)
+		- Recorded time played
+		- Recorded 'good' and 'bad' Breaths
+		- % good breath(shown)
+
+
+	1 Achievement:
+		per 'level of dificultness' more coins/xp/premium coins
