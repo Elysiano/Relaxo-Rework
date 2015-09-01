@@ -16,12 +16,11 @@ public class TimeInput : MonoBehaviour
 	Toggle sessionScreenToggleLeft;
 	Toggle instructionsScreenToggle;
 
-	public TouchGesture.GestureSettings GestureSetting;
-	private TouchGesture touch;
-
 	TouchGesture touchGesture;
 	UIManager uiManager;
 	ActiveScreen activeScreen;
+
+	public int playTime;
 
 	//Set GameObjects to variables & set the start time to 0 hours and 0 minutes
 	void Start ()
@@ -37,55 +36,6 @@ public class TimeInput : MonoBehaviour
 
 		inputHours = 0;
 		inputMinutes = 0;
-
-//		touch = new TouchGesture(this.GestureSetting);
-//		StartCoroutine(touch.CheckHorizontalSwipes(
-//		onDownSwipe: () =>
-//		{
-//			print ("Down");
-//		},
-//
-//		onUpSwipe: () =>
-//		{
-//			print ("Up");
-//		},
-//
-//		onRightSwipe: () =>
-//		{
-//			print ("Right");
-//			if (activeScreen.sessionScreen)
-//			{
-//				sessionScreenToggleRight = GameObject.Find ("Session Screen Toggle R").GetComponent<Toggle>();
-//				sessionScreenToggleRight.isOn = true;
-//				sessionScreenToggleRight.isOn = false;
-//			}
-//
-//			if (activeScreen.instructionsScreen)
-//			{
-//				instructionsScreenToggle = GameObject.Find ("Instructions Screen Toggle").GetComponent<Toggle>();
-//				instructionsScreenToggle.isOn = true;
-//				instructionsScreenToggle.isOn = false;
-//			}
-//		},
-//		
-//		onLeftSwipe: () =>
-//		{
-//			print ("Left");
-//			if (activeScreen.timeScreen)
-//			{
-//				timeScreenToggle = GameObject.Find ("Time Screen Toggle").GetComponent<Toggle>();
-//				timeScreenToggle.isOn = true;
-//				timeScreenToggle.isOn = false;
-//			}
-//
-//			if (activeScreen.sessionScreen)
-//			{
-//				sessionScreenToggleLeft = GameObject.Find ("Session Screen Toggle L").GetComponent<Toggle>();
-//				sessionScreenToggleLeft.isOn = true;
-//				sessionScreenToggleLeft.isOn = false;
-//			}
-//		}
-//		));
 	}
 	
 	// Keep updating the playtime
@@ -94,6 +44,7 @@ public class TimeInput : MonoBehaviour
 		hours.GetComponent<Text> ().text = inputHours.ToString ();
 		minutes.GetComponent<Text> ().text = inputMinutes.ToString ();
 		//print (Input.mousePosition);
+		playTime = (inputHours * 60) + inputMinutes;
 	}
 
 	// Functions to + or - the playtime if an arrow is pressed
