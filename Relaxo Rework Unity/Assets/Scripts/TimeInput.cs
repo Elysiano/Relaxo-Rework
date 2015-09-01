@@ -11,14 +11,23 @@ public class TimeInput : MonoBehaviour
 	int inputHours;
 	int inputMinutes;
 
-	public TouchGesture.GestureSettings GestureSetting;
-	private TouchGesture touch;
+	Toggle timeScreenToggle;
+	Toggle sessionScreenToggleRight;
+	Toggle sessionScreenToggleLeft;
+	Toggle instructionsScreenToggle;
 
 	TouchGesture touchGesture;
+	UIManager uiManager;
+	ActiveScreen activeScreen;
+
+	public int playTime;
 
 	//Set GameObjects to variables & set the start time to 0 hours and 0 minutes
 	void Start ()
 	{
+		uiManager = GameObject.Find ("UIManager").GetComponent<UIManager> ();
+		activeScreen = GameObject.Find ("Main Camera").GetComponent<ActiveScreen> ();
+
 		hours = GameObject.Find ("Hours");
 		minutes = GameObject.Find ("Minutes");
 
@@ -27,39 +36,6 @@ public class TimeInput : MonoBehaviour
 
 		inputHours = 0;
 		inputMinutes = 0;
-
-		touch = new TouchGesture(this.GestureSetting);
-		StartCoroutine(touch.CheckHorizontalSwipes(
-		onDownSwipe: () =>
-		{
-			//if (touchGesture.startPos == touchHour.transform.position)
-			//{
-				print ("Down");
-				//inputHours --;
-			//}
-		},
-
-		onUpSwipe: () =>
-		{
-			print ("Up");
-			//inputHours ++;
-		},
-
-		onRightSwipe: () =>
-		{
-			//if (touchGesture.startPos == touchHour.transform.position)
-			//{
-			print ("Right");
-			//inputHours --;
-			//}
-		},
-		
-		onLeftSwipe: () =>
-		{
-			print ("Left");
-			//inputHours ++;
-		}
-		));
 	}
 	
 	// Keep updating the playtime
@@ -68,6 +44,7 @@ public class TimeInput : MonoBehaviour
 		hours.GetComponent<Text> ().text = inputHours.ToString ();
 		minutes.GetComponent<Text> ().text = inputMinutes.ToString ();
 		//print (Input.mousePosition);
+		playTime = (inputHours * 60) + inputMinutes;
 	}
 
 	// Functions to + or - the playtime if an arrow is pressed
@@ -118,11 +95,5 @@ public class TimeInput : MonoBehaviour
 		{
 			inputMinutes = 59;
 		}
-	}
-
-	// Go to the next slide
-	public void NextSlide ()
-	{
-
 	}
 }
